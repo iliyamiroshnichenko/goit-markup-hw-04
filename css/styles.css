@@ -75,8 +75,7 @@ img {
   letter-spacing: 0.03em;
 }
 /* отступ всем кроме последнего элепента хэдера */
-.nav-main > .item:not(:last-child),
-.header-contacts .item:not(:last-child) {
+.nav-main > .item:not(:last-child) {
   margin-right: 50px;
 }
 /* основная навигация хэдера */
@@ -104,14 +103,36 @@ img {
   display: flex;
   margin-left: auto;
 }
+.header-contacts .item:not(:last-child) {
+  margin-right: 30px;
+}
 /* контакты хэдера */
 .header-contacts .link {
-  display: block;
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
 
   color: var(--second-text-color);
 }
+
+.header-contacts .mail::before {
+  content: "";
+  margin-right: 10px;
+  width: 16px;
+  height: 12px;
+  background-image: url("../images/envelope.svg");
+  background-size: contain;
+}
+.header-contacts .tel::before {
+  content: "";
+  margin-right: 10px;
+  width: 10px;
+  height: 16px;
+  background-image: url("../images/smartphone.svg");
+  background-size: contain;
+}
+
 /* герой */
 .hero {
   max-width: 1600px;
