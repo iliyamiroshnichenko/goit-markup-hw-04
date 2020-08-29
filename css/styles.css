@@ -115,8 +115,8 @@ img {
 
   color: var(--second-text-color);
 }
-
-.header-contacts .mail::before {
+/* иконка перед почтой */
+.header-contacts .icon-mail::before {
   content: "";
   margin-right: 10px;
   width: 16px;
@@ -124,7 +124,8 @@ img {
   background-image: url("../images/envelope.svg");
   background-size: contain;
 }
-.header-contacts .tel::before {
+/* иконка перед телефоном */
+.header-contacts .icon-tel::before {
   content: "";
   margin-right: 10px;
   width: 10px;
@@ -196,6 +197,31 @@ img {
 .feature-list .item {
   flex-basis: calc((100% - 3 * 30px) / 4);
 }
+/* псевдоэлемент элемента блока преимуществ */
+.feature-list .item::before {
+  content: "";
+  display: block;
+  margin-bottom: 30px;
+  height: 120px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--secohd-bg-color);
+  border-radius: 4px;
+}
+
+.feature-list .icon-antennа::before {
+  background-image: url("../images/antenna.svg");
+}
+.feature-list .icon-clock::before {
+  background-image: url("../images/clock.svg");
+}
+.feature-list .icon-diagramm::before {
+  background-image: url("../images/diagram.svg");
+}
+.feature-list .icon-ausronaut::before {
+  background-image: url("../images/astronaut.svg");
+}
+
 /* отступы всем кроме последнего элемента списков */
 .feature-list .item:not(:last-child),
 .examples-list .item:not(:last-child),
