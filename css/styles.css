@@ -115,25 +115,15 @@ img {
 
   color: var(--second-text-color);
 }
-/* иконка перед почтой */
-.header-contacts .icon-mail::before {
-  content: "";
+/* отступ иконок в хэдере */
+.header-contacts .icon {
   margin-right: 10px;
-  width: 16px;
-  height: 12px;
-  background-image: url("../images/envelope.svg");
-  background-size: contain;
 }
-/* иконка перед телефоном */
-.header-contacts .icon-tel::before {
-  content: "";
-  margin-right: 10px;
-  width: 10px;
-  height: 16px;
-  background-image: url("../images/smartphone.svg");
-  background-size: contain;
+/* акцент иконок в хэдере */
+.header-contacts .link:hover > .icon,
+.header-contacts .link:focus > .icon {
+  --color1: var(--accent-color);
 }
-
 /* герой */
 .hero {
   max-width: 1600px;
@@ -188,44 +178,34 @@ img {
   padding-bottom: 0;
 }
 /* флексбокс */
-.feature-list,
-.examples-list,
-.team-list {
+.flex {
   display: flex;
 }
+
 /* ширина элементов секции Преимущества */
 .feature-list .item {
   flex-basis: calc((100% - 3 * 30px) / 4);
 }
-/* псевдоэлемент элемента блока преимуществ */
-.feature-list .item::before {
-  content: "";
-  display: block;
+/* фон иконки преимуществ */
+.feature-list .thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 30px;
   height: 120px;
-  background-repeat: no-repeat;
-  background-position: center;
   background-color: var(--secohd-bg-color);
   border-radius: 4px;
 }
-
-.feature-list .icon-antennа::before {
-  background-image: url("../images/antenna.svg");
+/* иконка преимуществ */
+.feature-list .icon {
+  width: 70px;
+  height: 70px;
 }
-.feature-list .icon-clock::before {
-  background-image: url("../images/clock.svg");
-}
-.feature-list .icon-diagramm::before {
-  background-image: url("../images/diagram.svg");
-}
-.feature-list .icon-ausronaut::before {
-  background-image: url("../images/astronaut.svg");
-}
-
 /* отступы всем кроме последнего элемента списков */
 .feature-list .item:not(:last-child),
 .examples-list .item:not(:last-child),
-.team-list .item:not(:last-child) {
+.team-list .item:not(:last-child),
+.clients-list .item:not(:last-child) {
   margin-right: 30px;
 }
 /* Заголовки h3 секции преимущества */
@@ -268,7 +248,7 @@ img {
   text-align: center;
 }
 /* элементы списка наша команда */
-.team-list .item {
+.team-list > .item {
   flex-basis: calc((100% - 3 * 30px) / 4);
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -288,11 +268,68 @@ img {
 /* Текст секции Наша команда */
 .team-list .text {
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 
   color: var(--second-text-color);
   font-size: 16px;
   line-height: 1.19;
+}
+/* Список соцсетей */
+.network-list {
+  padding-left: 32px;
+  padding-right: 32px;
+  margin-bottom: 30px;
+}
+
+.network-list .item:not(:last-child) {
+  margin-right: 10px;
+}
+/* ссылка на соцсеть */
+.network-list .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+/* меняем фон ссылки при ховере */
+.network-list .link:hover,
+.network-list .link:focus {
+  background-color: var(--accent-color);
+}
+/* меняем цвет самой иконки при ховере */
+.network-list .link:hover > .icon,
+.network-list .link:focus > .icon {
+  --color4: var(--main-bg-color);
+}
+/* иконка */
+.network-list .icon {
+  width: 20px;
+  height: 20px;
+}
+/* ширина элеентов секции клиенты */
+.clients-list .item {
+  flex-basis: calc((100% - 5 * 30px) / 6);
+}
+/* ссылка клиентов */
+.clients-list .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+/* цвет рамки при ховере */
+.clients-list .link:hover,
+.clients-list .link:focus {
+  border-color: var(--accent-color);
+}
+/*  цвет иконки при ховере */
+.clients-list .link:hover > .icon,
+.clients-list .link:focus > .icon {
+  --color4: var(--accent-color);
 }
 /* футер */
 .footer {
@@ -301,8 +338,14 @@ img {
 
   background-color: var(--third-bg-color);
 }
-.footer-address {
+.footer .flex {
+  align-items: baseline;
+}
+
+.footer-address,
+.footer-networks {
   width: 270px;
+  margin-right: 30px;
 }
 /* лого футера */
 .footer-logo {
@@ -330,6 +373,25 @@ img {
   margin-top: 9px;
 
   color: rgba(255, 255, 255, 0.6);
+}
+.footer-networks .text {
+  display: block;
+  margin-bottom: 20px;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  color: var(--main-bg-color);
+}
+
+.footer-networks .network-list {
+  padding: 0;
+  margin: 0;
+}
+.footer-networks .link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.footer-networks .icon {
+  --color4: var(--main-bg-color);
 }
 
 /* Страница Портфолио */

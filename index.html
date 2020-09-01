@@ -34,13 +34,19 @@
         </nav>
         <ul class="list header-contacts">
           <li class="item">
-            <a class="link icon-mail" href="mailto:info@devstudio.com"
-              >info@devstudio.com</a
+            <a class="link" href="mailto:info@devstudio.com">
+              <svg class="icon" width="16" height="12">
+                <use href="./images/svg/sprite.svg#icon-envelope"></use>
+              </svg>
+              info@devstudio.com</a
             >
           </li>
           <li class="item">
-            <a class="link icon-tel" href="tel:+380961111111"
-              >+38 096 111 11 11</a
+            <a class="link" href="tel:+380961111111">
+              <svg class="icon" width="10" height="16">
+                <use href="./images/svg/sprite.svg#icon-smartphone"></use>
+              </svg>
+              +38 096 111 11 11</a
             >
           </li>
         </ul>
@@ -58,29 +64,49 @@
       <section class="section feature">
         <div class="container">
           <h2 class="visually-hidden">Преимущества</h2>
-          <ul class="list feature-list">
-            <li class="item icon-antennа">
+          <ul class="list flex feature-list">
+            <li class="item">
+              <div class="thumb">
+                <svg class="icon">
+                  <use href="./images/svg/sprite.svg#icon-antenna"></use>
+                </svg>
+              </div>
               <h3 class="title">Внимание к деталям</h3>
               <p class="text">
                 Идейные соображения, а также начало повседневной работы по
                 формированию позиции.
               </p>
             </li>
-            <li class="item icon-clock">
+            <li class="item">
+              <div class="thumb">
+                <svg class="icon">
+                  <use href="./images/svg/sprite.svg#icon-clock"></use>
+                </svg>
+              </div>
               <h3 class="title">Пунктуальность</h3>
               <p class="text">
                 Задача организации, в особенности же рамки и место обучения
                 кадров влечет за собой.
               </p>
             </li>
-            <li class="item icon-diagramm">
+            <li class="item">
+              <div class="thumb">
+                <svg class="icon">
+                  <use href="./images/svg/sprite.svg#icon-diagram"></use>
+                </svg>
+              </div>
               <h3 class="title">Планирование</h3>
               <p class="text">
                 Равным образом консультация с широким активом в значительной
                 степени обуславливает.
               </p>
             </li>
-            <li class="item icon-ausronaut">
+            <li class="item">
+              <div class="thumb">
+                <svg class="icon">
+                  <use href="./images/svg/sprite.svg#icon-astronaut"></use>
+                </svg>
+              </div>
               <h3 class="title">Современные технологии</h3>
               <p class="text">
                 Значимость этих проблем настолько очевидна, что реализация
@@ -94,7 +120,7 @@
       <section class="section">
         <div class="container">
           <h2 class="section-title">Чем мы занимаемся</h2>
-          <ul class="list examples-list">
+          <ul class="list flex examples-list">
             <li class="item">
               <img
                 src="./images/examples/desktopapp.jpg"
@@ -126,7 +152,7 @@
       <section class="section team">
         <div class="container">
           <h2 class="section-title">Наша команда</h2>
-          <ul class="list team-list">
+          <ul class="list flex team-list">
             <!--Первый сотрудник-->
             <li class="item">
               <img
@@ -136,6 +162,36 @@
               />
               <h3 class="title">Игорь Демьяненко</h3>
               <p class="text">Product Designer</p>
+              <ul class="list flex network-list">
+                <li class="item">
+                  <a href="#" class="link" aria-label="Instagram">
+                    <svg class="icon">
+                      <use href="./images/svg/sprite.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#" class="link" aria-label="Twitter">
+                    <svg class="icon">
+                      <use href="./images/svg/sprite.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#" class="link" aria-label="Facebook">
+                    <svg class="icon">
+                      <use href="./images/svg/sprite.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#" class="link" aria-label="Linkedin">
+                    <svg class="icon">
+                      <use href="./images/svg/sprite.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
             </li>
             <!--Второй сотрудник-->
             <li class="item">
@@ -146,6 +202,36 @@
               />
               <h3 class="title">Ольга Репина</h3>
               <p class="text">Frontend Developer</p>
+              <ul class="list flex network-list">
+                <li class="item">
+                  <a href="#" class="link" aria-label="Instagram">
+                    <svg class="icon">
+                      <use href="./images/svg/sprite.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#" class="link" aria-label="Twitter">
+                    <svg class="icon">
+                      <use href="./images/svg/sprite.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#" class="link" aria-label="Facebook">
+                    <svg class="icon">
+                      <use href="./images/svg/sprite.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#" class="link" aria-label="Linkedin">
+                    <svg class="icon">
+                      <use href="./images/svg/sprite.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
             </li>
             <!--Третий сотрудник-->
             <li class="item">
@@ -156,6 +242,36 @@
               />
               <h3 class="title">Николай Тарасов</h3>
               <p class="text">Marketing</p>
+              <ul class="list flex network-list">
+                <li class="item">
+                  <a href="#" class="link" aria-label="Instagram">
+                    <svg class="icon">
+                      <use href="./images/svg/sprite.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#" class="link" aria-label="Twitter">
+                    <svg class="icon">
+                      <use href="./images/svg/sprite.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#" class="link" aria-label="Facebook">
+                    <svg class="icon">
+                      <use href="./images/svg/sprite.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#" class="link" aria-label="Linkedin">
+                    <svg class="icon">
+                      <use href="./images/svg/sprite.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
             </li>
             <!--Четвертый сотрудник-->
             <li class="item">
@@ -166,6 +282,36 @@
               />
               <h3 class="title">Михаил Ермаков</h3>
               <p class="text">UI Designer</p>
+              <ul class="list flex network-list">
+                <li class="item">
+                  <a href="#" class="link" aria-label="Instagram">
+                    <svg class="icon">
+                      <use href="./images/svg/sprite.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#" class="link" aria-label="Twitter">
+                    <svg class="icon">
+                      <use href="./images/svg/sprite.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#" class="link" aria-label="Facebook">
+                    <svg class="icon">
+                      <use href="./images/svg/sprite.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#" class="link" aria-label="Linkedin">
+                    <svg class="icon">
+                      <use href="./images/svg/sprite.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>
@@ -173,12 +319,56 @@
       <section class="section">
         <div class="container">
           <h2 class="section-title">Постоянные клиенты</h2>
+          <ul class="list flex clients-list">
+            <li class="item">
+              <a href="#" class="link">
+                <svg class="icon" width="44" height="50">
+                  <use href="./images/svg/sprite.svg#icon-client1"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="item">
+              <a href="#" class="link">
+                <svg class="icon" width="40" height="52">
+                  <use href="./images/svg/sprite.svg#icon-client2"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="item">
+              <a href="#" class="link">
+                <svg class="icon" width="41" height="43">
+                  <use href="./images/svg/sprite.svg#icon-client3"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="item">
+              <a href="#" class="link">
+                <svg class="icon" width="80" height="42">
+                  <use href="./images/svg/sprite.svg#icon-client4"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="item">
+              <a href="#" class="link">
+                <svg class="icon" width="59" height="47">
+                  <use href="./images/svg/sprite.svg#icon-client5"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="item">
+              <a href="#" class="link">
+                <svg class="icon" width="88" height="46">
+                  <use href="./images/svg/sprite.svg#icon-client6"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
       </section>
     </main>
     <!--Футер-->
     <footer class="footer">
-      <div class="container">
+      <div class="container flex">
         <div class="footer-address">
           <a class="link footer-logo" href="./index.html">
             <span class="current">Web</span>Studio
@@ -191,6 +381,39 @@
             <br />
             <a class="link" href="tel:+380991111111">+38 099 111 11 11</a>
           </address>
+        </div>
+        <div class="footer-networks">
+          <strong class="text">присоединяйтесь</strong>
+          <ul class="list flex network-list">
+            <li class="item">
+              <a href="#" class="link" aria-label="Instagram">
+                <svg class="icon">
+                  <use href="./images/svg/sprite.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="item">
+              <a href="#" class="link" aria-label="Twitter">
+                <svg class="icon">
+                  <use href="./images/svg/sprite.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="item">
+              <a href="#" class="link" aria-label="Facebook">
+                <svg class="icon">
+                  <use href="./images/svg/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="item">
+              <a href="#" class="link" aria-label="Linkedin">
+                <svg class="icon">
+                  <use href="./images/svg/sprite.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>
