@@ -56,7 +56,6 @@ img {
   width: 1200px;
   margin: 0px auto;
   padding: 0px 15px;
-  /* outline: 2px solid orange; */
 }
 /* флексбокс хэдера */
 .header-flex,
@@ -163,6 +162,7 @@ img {
   min-width: 200px;
   padding: 10px 32px;
   border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   color: var(--main-bg-color);
   background-color: var(--accent-color);
@@ -171,6 +171,10 @@ img {
   line-height: 1.87;
   text-align: center;
   letter-spacing: 0.06em;
+}
+.button.primary:hover,
+.button.primary:focus {
+  background-color: #188ce8;
 }
 /* отступы секции преимуществ */
 .section.feature {
