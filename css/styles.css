@@ -50,6 +50,7 @@ img {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  border-bottom: 1px solid #ececec;
 }
 /* Геометрия контейнера */
 .container {
@@ -125,11 +126,13 @@ img {
 }
 /* герой */
 .hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   max-width: 1600px;
   height: 600px;
   margin: 0 auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
 
   background-color: #c4c4c4;
   background-image: linear-gradient(
@@ -138,16 +141,16 @@ img {
       rgba(47, 48, 58, 0.4)
     ),
     url("../images/bg-hero.jpg");
-}
-.hero-container {
-  max-width: 770px;
-  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   text-align: center;
 }
 /* Заголовок героя */
 .hero-title {
   margin-top: 0;
   margin-bottom: 30px;
+  max-width: 696px;
 
   color: var(--main-bg-color);
   font-weight: 900;
@@ -348,6 +351,8 @@ img {
 .footer-address,
 .footer-networks {
   width: 270px;
+}
+.footer-address {
   margin-right: 30px;
 }
 /* лого футера */
@@ -396,7 +401,6 @@ img {
 }
 
 /* Страница Портфолио */
-
 /* список кнопок навигации портфолио */
 .portfolio-nav {
   display: flex;
@@ -414,6 +418,7 @@ img {
   padding: 6px 22px;
   border: 1px solid transparent;
   border-radius: 4px;
+  cursor: pointer;
 
   color: var(--main-text-color);
   background-color: var(--secohd-bg-color);
